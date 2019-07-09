@@ -6,6 +6,15 @@ USE `log4jdemo`;
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.1.34-MariaDB
 
+
+CREATE TABLE `logs` (
+  `USER_ID` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `DATED` date NOT NULL,
+  `LOGGER` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `LEVEL` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `MESSAGE` varchar(1000) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
  
 
 LOCK TABLES `logs` WRITE;
